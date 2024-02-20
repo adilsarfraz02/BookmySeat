@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+  overflow-x: hidden;
+}
+
+html::-moz-selection{
+  background: rgb(255, 174, 0);
+  color: white;
+}
+body::selection{
+  background: rgb(255, 145, 0);
+  color: #fff;
+}
+
+.box{
+  text-align: center;
+}
+::-webkit-scrollbar{
+  width: 10px;
+  background: white;
+  margin: 12px;
+}
+::-webkit-scrollbar-track{
+  background: transparent;
+  padding: 3px;
+}
+::-webkit-scrollbar-thumb{
+  border: 1px solid white;
+  background-color: #242424;
+  border-radius: 29px;
+  padding: 3px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+  @apply bg-orange-600;
+}
+
+.ecommerce{
+  animation: animate 9s 255ms infinite ;
+}
+@keyframes animate {
+  0%{
+    transform: translateY(-20px);
+  }
+  50%{
+    transform: translateY(10px);
+  }
+  100%{
+    transform: translateY(-20px);
+  }
+}
+
+
+@media print {
+  body * {
+    visibility: hidden;
+    background: red;
+    color: #070707;
+  }
+  #print-content,
+  #print-content * {
+    visibility: visible;
+  }
+  #print-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+}
